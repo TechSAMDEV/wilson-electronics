@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Explore all seven divisions of Wilson Home Appliances, from televisions and refrigeration to kitchen, home and energy products.">
+    <title>Wilson | Product range</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <script src="../assets/scripts/product-catalog.js" defer></script>
+    <script src="../assets/scripts/main.js" defer></script>
+  </head>
+  <body data-page="products">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html" aria-label="Wilson Electronic home">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <span class="brand-name">wilson<span>ELECTRONIC</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+          <a href="../index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="products.html" aria-current="page">Products</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+          <a class="button button-small button-blue nav-cta" href="contact.html">Trade enquiries <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <span class="eyebrow">Wilson… Makes It Better.</span>
+          <h1>One brand. <span>Every part of home.</span></h1>
+          <p>Explore 54 product families across seven Wilson Home Appliances divisions. Product models, specifications and pricing will be added to the master catalogue when confirmed.</p>
+          <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><span>Products</span></div>
+        </div>
+        <div class="page-hero-art" aria-hidden="true">⌂</div>
+      </section>
+
+      <section class="section container section-compact">
+        <div class="catalog-toolbar">
+          <div class="filter-list division-filters" role="group" aria-label="Filter products by division">
+            <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All divisions</button>
+            <button class="filter-button" type="button" data-filter="television" aria-pressed="false">TV &amp; entertainment</button>
+            <button class="filter-button" type="button" data-filter="refrigeration" aria-pressed="false">Refrigeration</button>
+            <button class="filter-button" type="button" data-filter="laundry" aria-pressed="false">Laundry</button>
+            <button class="filter-button" type="button" data-filter="air-conditioning" aria-pressed="false">Air conditioning</button>
+            <button class="filter-button" type="button" data-filter="kitchen" aria-pressed="false">Kitchen</button>
+            <button class="filter-button" type="button" data-filter="water-home" aria-pressed="false">Water &amp; home</button>
+            <button class="filter-button" type="button" data-filter="power-energy" aria-pressed="false">Power &amp; energy</button>
+          </div>
+          <label class="search-field">
+            <span aria-hidden="true">⌕</span>
+            <span class="sr-only">Search appliance families</span>
+            <input type="search" data-product-search placeholder="Search the product range..." autocomplete="off">
+          </label>
+        </div>
+        <p class="catalog-count" data-product-count aria-live="polite"></p>
+        <div class="appliance-grid" data-product-grid aria-live="polite"></div>
+        <p class="catalog-note">This is a product-family overview, not a model-level catalogue. Please confirm product models, specifications, packaging and local prices before publishing those details.</p>
+      </section>
+
+      <section class="container cta-band small-cta">
+        <div>
+          <span class="eyebrow eyebrow-light">Wilson Home Appliances</span>
+          <h2>Interested in the <span>Wilson range?</span></h2>
+          <p>Get in touch about product information or trade enquiries.</p>
+        </div>
+        <a class="button button-white" href="contact.html">Contact Wilson <span aria-hidden="true">↗</span></a>
+        <span class="cta-decoration" aria-hidden="true">✳</span>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a class="brand brand-light" href="../index.html"><span class="brand-mark" aria-hidden="true">W</span><span class="brand-name">wilson<span>HOME APPLIANCES</span></span></a>
+          <p>Wilson Home Appliances.<br>Wilson… Makes It Better.</p>
+        </div>
+        <div class="footer-column"><strong>Explore</strong><a href="about.html">About us</a><a href="products.html">Products</a><a href="services.html">Services</a></div>
+        <div class="footer-column"><strong>Here to help</strong><a href="contact.html">Contact us</a><a href="contact.html#faq">FAQs</a><a href="services.html">Support</a></div>
+        <div class="footer-contact"><strong>Business enquiries</strong><span>Add Wilson's verified email</span><span>Add Wilson's phone number</span><span>Add business hours</span></div>
+      </div>
+      <div class="container footer-bottom"><span>© <span data-year></span> Wilson Home Appliances. All rights reserved.</span><span>Wilson… Makes It Better. <span class="footer-heart">♥</span></span></div>
+    </footer>
+  </body>
+</html>
