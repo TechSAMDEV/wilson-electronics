@@ -33,9 +33,11 @@ document.querySelectorAll("[data-year]").forEach((year) => {
 
 const setupImageSlots = (root) => {
   root.querySelectorAll("[data-image-slot]").forEach((image) => {
-    const imageFrame = image.closest(".image-frame, .appliance-card-icon");
+    const imageFrame = image.closest(".image-frame, .appliance-card-icon, .category-image");
     const updateImageState = () => {
-      imageFrame.classList.toggle("has-image", image.naturalWidth > 0);
+      const hasImage = image.naturalWidth > 0;
+      imageFrame.classList.toggle("has-image", hasImage);
+      imageFrame.closest(".category-card")?.classList.toggle("has-image", hasImage);
     };
 
     image.addEventListener("load", updateImageState, { once: true });
