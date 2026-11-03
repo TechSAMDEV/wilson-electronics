@@ -1905,12 +1905,19 @@ h2 span {
 
 .appliance-card-icon {
   position: relative;
-  min-height: 115px;
+  min-height: 148px;
   display: grid;
   place-items: center;
   overflow: hidden;
   color: var(--blue);
   background: linear-gradient(135deg, #f0f6ff, #f8faff);
+}
+
+.appliance-card-icon .image-slot {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
 }
 
 .appliance-card-icon::before,
@@ -1964,8 +1971,52 @@ h2 span {
   text-transform: uppercase;
 }
 
+.appliance-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.appliance-card-model {
+  margin: 0;
+  color: var(--blue-dark);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .35px;
+}
+
+.appliance-card-tier {
+  padding: 3px 7px;
+  border: 1px solid #e3eaf5;
+  border-radius: 20px;
+  color: #62728a;
+  background: #f7f9fc;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.appliance-card-tier.tier-essential {
+  border-color: #dce8f8;
+  color: #42638e;
+  background: #f0f6ff;
+}
+
+.appliance-card-tier.tier-classic {
+  border-color: #cfe0fb;
+  color: #285db4;
+  background: #edf4ff;
+}
+
+.appliance-card-tier.tier-premium {
+  border-color: #c8d8f3;
+  color: #173c79;
+  background: #e7effc;
+}
+
 .appliance-card h3 {
-  min-height: 37px;
+  min-height: 38px;
   margin: 0 0 8px;
   color: var(--navy);
   font-size: 12px;
@@ -2168,6 +2219,24 @@ h2 span {
   margin: 12px 0 0;
   color: #54708f;
   font-size: 10px;
+  line-height: 1.6;
+}
+
+.form-note[data-status="success"] {
+  color: #167447;
+}
+
+.form-note[data-status="error"] {
+  color: #b42318;
+}
+
+.form-note[data-status="loading"] {
+  color: #54708f;
+}
+
+.form-submit:disabled {
+  cursor: wait;
+  opacity: .75;
 }
 
 .contact-details {
@@ -2848,7 +2917,7 @@ h2 span {
   }
 
   .appliance-card-icon {
-    min-height: 78px;
+    min-height: 125px;
   }
 
   .appliance-card-copy {
