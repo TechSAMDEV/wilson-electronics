@@ -39,10 +39,21 @@ const setupImageSlots = (root) => {
       imageFrame.classList.toggle("has-image", hasImage);
       imageFrame.closest(".category-card")?.classList.toggle("has-image", hasImage);
     };
+    const handleImageError = () => {
+      const fallbackSrc = image.dataset.fallbackSrc;
+      if (fallbackSrc && image.src !== fallbackSrc) {
+        image.src = fallbackSrc;
+        return;
+      }
+      updateImageState();
+    };
 
     image.addEventListener("load", updateImageState, { once: true });
-    image.addEventListener("error", updateImageState, { once: true });
-    if (image.complete) updateImageState();
+    image.addEventListener("error", handleImageError, { once: true });
+    if (image.complete) {
+      if (image.naturalWidth > 0) updateImageState();
+      else handleImageError();
+    }
   });
 };
 
@@ -312,7 +323,8 @@ if (productGrid) {
       const image = document.createElement("img");
       image.className = "image-slot";
       image.dataset.imageSlot = "";
-      image.src = createProductIllustration(division, product);
+      image.dataset.fallbackSrc = createProductIllustration(division, product);
+      image.src = product.image || `../assets/img/products/${product.name}.jpg`;
       image.alt = "";
       image.loading = "lazy";
       const iconText = document.createElement("span");
