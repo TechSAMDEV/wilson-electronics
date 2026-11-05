@@ -141,31 +141,25 @@ textarea:focus-visible {
   flex: 0 0 auto;
 }
 
-.brand-mark {
-  width: 38px;
-  height: 38px;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
-  color: white;
-  background: var(--blue);
-  font: 800 20px/1 var(--font-display);
-  letter-spacing: -2px;
-  box-shadow: 0 5px 13px rgb(40 117 240 / 23%);
+.brand-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
 }
 
-.brand-name {
-  display: grid;
-  color: var(--navy);
-  font: 800 16px/1.08 var(--font-display);
-  letter-spacing: -.7px;
+.brand-logo {
+  display: block;
+  width: 92px;
+  height: auto;
 }
 
-.brand-name span {
-  margin-top: 3px;
-  color: #748198;
-  font: 600 9px/1 var(--font-body);
-  letter-spacing: 2.45px;
+.brand-subtitle {
+  color: #173b82;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.25px;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -1521,20 +1515,16 @@ h2 span {
   background: #14233e;
 }
 
+.footer-brand .brand-subtitle {
+  color: #dbe5f4;
+}
+
 .footer-main {
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr 1.35fr;
   gap: 42px;
   padding-top: 58px;
   padding-bottom: 46px;
-}
-
-.brand-light .brand-name {
-  color: white;
-}
-
-.brand-light .brand-name span {
-  color: #9cabc0;
 }
 
 .footer-brand p {
@@ -2980,9 +2970,8 @@ h2 span {
     gap: 8px;
   }
 
-  .brand-mark {
-    width: 35px;
-    height: 35px;
+  .brand-logo {
+    width: 78px;
   }
 
   .hero-actions {
